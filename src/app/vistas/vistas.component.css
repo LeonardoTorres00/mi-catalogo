@@ -1,0 +1,15 @@
+.views {
+    display: flex;
+}
+
+a {
+    background-color: #30475e;
+    padding: 15px;
+    text-align: center;
+    letter-spacing: 4px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #e9e9e9;
+}
