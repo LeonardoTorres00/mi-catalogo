@@ -1,0 +1,20 @@
+.list {
+     height: 120px;
+     margin: 20px 150px;
+     min-width: 300px;
+     display: flex;
+     align-items: center;
+     background-color: #30475e;
+     justify-content: space-between;
+     border-radius: 20px;
+     font-size: x-large;
+}
+
+.icon {
+    margin: 2px 5px 2px 50px;
+    font-size: 50px;
+}
+
+.info {
+    margin-right: 30px;
+}
