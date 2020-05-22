@@ -12,9 +12,24 @@
 
 .icon {
     margin: 2px 5px 2px 50px;
-    font-size: 50px;
+    cursor: pointer;
 }
 
 .info {
     margin-right: 30px;
+}
+
+.datos {
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: larger;
+}
+
+.modal-body {
+    background-color: #30475e;
+    color: white;
+}
+
+.modal-header {
+    background-color: #222831;
 }

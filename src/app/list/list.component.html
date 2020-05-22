@@ -1,8 +1,26 @@
-<div class="list" *ngFor='let auto of autos'>
-    <div>
-        <i class="icon fas fa-info-circle"></i>
+<ng-container *ngFor='let auto of autos'>
+    <div class="list">
+        <div class="icon" (click)="open(auto, content)">
+            <img alt="i" src="assets/images/info4.png" width="50">
+        </div>
+        <div class="info">{{ auto.descripcion}}</div>
     </div>
-    <div class="info">
-        {{auto.descripcion}}
+</ng-container>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Detalles Automóvil</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
-</div>
+    <div class="modal-body">
+        <div>
+            <p class="datos">Marca: {{autoSeleccionado?.marca}}. </p>
+            <p class="datos">Submarca: {{autoSeleccionado?.submarca}}. </p>
+            <p class="datos">Modelo: {{autoSeleccionado?.modelo}}. </p>
+            <p class="datos">Descripción: {{autoSeleccionado?.descripcion}}. </p>
+            <p class="datos">Fecha registro: {{autoSeleccionado?.fecha_registro}}. </p>
+        </div>
+    </div>
+</ng-template>
