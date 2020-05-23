@@ -3,18 +3,16 @@
         <tr>
             <th scope="col">Marca</th>
             <th scope="col">Submarca</th>
-            <th scope="col">Modelo</th>
+            <th scope="col">Modelos</th>
             <th scope="col">Descripción</th>
-            <th scope="col">Fecha de registro</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let auto of autos">
             <td> {{auto.marca}} </td>
             <td> {{auto.submarca}} </td>
-            <td> {{auto.modelo}} </td>
+            <td> {{auto.modelos}} </td>
             <td> {{auto.descripcion}} </td>
-            <td> {{auto.fecha_registro}} </td>
         </tr>
     </tbody>
 </table>
