@@ -5,19 +5,24 @@
             <th scope="col">Submarca</th>
             <th scope="col">Modelos</th>
             <th scope="col">Descripción</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let auto of autos">
+        <tr *ngFor="let auto of autos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
             <td> {{auto.marca}} </td>
             <td> {{auto.submarca}} </td>
             <td> {{auto.modelos}} </td>
             <td> {{auto.descripcion}} </td>
+            <td>
+                <img alt="edit" src="assets/images/delete.png" width="30">
+            </td>
+            <td>
+                <img alt="delete" src="assets/images/edit.png" width="30">
+            </td>
         </tr>
     </tbody>
 </table>
 
-<div class="d-flex justify-content-between p-2">
-    <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
-    </ngb-pagination>
-</div>
+<ngb-pagination [collectionSize]="autos.length" [(page)]="page" aria-label="Default pagination"></ngb-pagination>

@@ -10,6 +10,8 @@ import { AutosService } from '../services/autos.service';
 })
 export class TableComponent implements OnInit {
   autos: Automovil[];
+  page = 4;
+  pageSize = 10;
   
   constructor(private autoService: AutosService) { }
 
@@ -18,15 +20,4 @@ export class TableComponent implements OnInit {
       this.autos = response.data;
     })
   }
-
-  page = 1;
-  pageSize = 4;
-  collectionSize = 20;
-
-  get car(): Automovil[]{ //Revisar 
-    return this.autos
-      .map((car, i) => ({id: i + 1, ...car}))
-      .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
-  }
-
 }

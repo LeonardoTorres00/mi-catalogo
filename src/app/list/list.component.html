@@ -1,4 +1,4 @@
-<ng-container *ngFor='let auto of autos'>
+<ng-container *ngFor="let auto of autos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
     <div class="list">
         <div class="icon" (click)="open(auto, content)">
             <img alt="i" src="assets/images/info4.png" width="50">
@@ -24,3 +24,5 @@
         </div>
     </div>
 </ng-template>
+
+<ngb-pagination [collectionSize]="autos.length" [(page)]="page" aria-label="Default pagination"></ngb-pagination>

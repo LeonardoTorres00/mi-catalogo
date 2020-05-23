@@ -4,6 +4,10 @@ thead {
     border-color: inherit;
 }
 
+tbody {
+    display: table-row-group;
+}
+
 table {
     width: 90%;
     margin-left: 80px;
@@ -16,11 +20,20 @@ table {
     font-size: large;
 }
 
+tr {
+    display: table-row;
+}
+
 th {
     background-color: #30475e;
 }
 
 td {
+    display: table-cell;
     background-color: rgba(0,0,0,.05);
     color: black;
+}
+
+img {
+    cursor: pointer;
 }
