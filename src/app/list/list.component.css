@@ -20,16 +20,14 @@
 }
 
 .datos {
-    color: white;
-    font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: larger;
 }
 
 .modal-body {
-    background-color: #30475e;
-    color: white;
+    color: black;
 }
 
 .modal-header {
-    background-color: #222831;
+    background-color: #30475e;  
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }

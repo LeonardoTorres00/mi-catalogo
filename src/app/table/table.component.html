@@ -18,11 +18,11 @@
             <td>
                 <img alt="edit" src="assets/images/delete.png" width="30">
             </td>
-            <td>
+            <td (click)="openModalEditar(auto)">
                 <img alt="delete" src="assets/images/edit.png" width="30">
             </td>
         </tr>
     </tbody>
 </table>
 
-<ngb-pagination [collectionSize]="autos.length" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+<ngb-pagination [collectionSize]="autos?.length" [(page)]="page" aria-label="Default pagination"></ngb-pagination>

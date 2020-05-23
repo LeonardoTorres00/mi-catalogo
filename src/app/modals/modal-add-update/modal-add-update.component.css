@@ -1,0 +1,11 @@
+.modal-header {
+    color: white;
+    font-size: 40px; 
+    font-family: "Comic Sans MS", cursive, sans-serif;  
+    background-color: #30475e;  
+}
+
+.modal-body {
+    color: black;
+    font-size: 20px;
+}

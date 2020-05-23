@@ -11,13 +11,15 @@ import { AutosService } from '../services/autos.service';
 export class ListComponent implements OnInit {
   autos: Automovil[];
   autoSeleccionado: Automovil;
-  page = 4;
-  pageSize = 10;
+  page: number;
+  pageSize: number;
 
   closeResult = '';
   constructor(private modalService: NgbModal, private autoService: AutosService) { }
 
   ngOnInit(): void {
+    this.page = 4;
+    this.pageSize = 10;
     this.autoService.getAutos().subscribe((response)=>{
       this.autos = response.data;
     })
