@@ -1,0 +1,31 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{accion}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<div class="modal-body">
+    <div class="form-group">
+        <label for="marca">Marca</label>
+        <input type="text" class="form-control" id="marca" placeholder="Agregar marca" [(ngModel)]="auto.marca" required name="marca">
+    </div>
+    <div class="form-group">
+        <label for="submarca">Submarca</label>
+        <input type="text" class="form-control" id="submarca" placeholder="Agregar submarca" [(ngModel)]="auto.submarca" name="submarca">
+    </div>
+    <div class="form-group">
+        <label for="modelos">Modelos</label>
+        <input type="text" disabled class="form-control" id="modelos" placeholder="Agregar modelos"
+            [(ngModel)]="auto.modelos" name="modelos">
+    </div>
+    <div class="form-group">
+        <label for="descripcion">Descripción</label>
+        <input type="text" class="form-control" id="descripcion" placeholder="Agregar descripcion"
+            [(ngModel)]="auto.descripcion" name="descripcion">
+    </div>
+
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-outline-info" (click)="activeModal.close(auto)">Guardar</button>
+    </div>
+</div>

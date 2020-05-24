@@ -1,0 +1,14 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Eliminar</h4>
+    <button type="button" class="close" aria-describedby="modal-title" (click)="activeModal.dismiss('cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <p>¿Estas seguro que deseas eliminar? <span class="text-dark">{{auto.descripcion}} </span></p>
+    <span class="text-danger">No se podrá retroceder.</span>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss('cancel')">Cancelar</button>
+    <button type="button" class="btn btn-danger" (click)="activeModal.close(auto)">Ok</button>
+</div>

@@ -37,3 +37,7 @@ td {
 img {
     cursor: pointer;
 }
+
+.add{
+    padding: 20px 0px 0px 80px;
+}
