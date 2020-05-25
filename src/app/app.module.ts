@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ModalAddUpdateComponent } from './modals/modals-add-update/modal-add-update.component';
 import { FormsModule } from '@angular/forms';
 import { ModalConfirmActionComponent } from './modals/modal-confirm-action/modal-confirm-action.component';
+import { RangoModelosDirective } from './directives/rango-modelos.directive';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ModalConfirmActionComponent } from './modals/modal-confirm-action/modal
     TableComponent,
     PageNotFoundComponent,
     ModalAddUpdateComponent,
-    ModalConfirmActionComponent
+    ModalConfirmActionComponent,
+    RangoModelosDirective
   ],
   imports: [
     BrowserModule,

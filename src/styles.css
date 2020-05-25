@@ -5,3 +5,11 @@ html, body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #ececec;
 }
+
+.ng-valid[required] {
+    border-left: 5px solid green;
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid red;
+}
