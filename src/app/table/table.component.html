@@ -1,6 +1,16 @@
 <div class="add">
     <button (click)="openModalAgregar()" type="button" class="btn btn-dark">Agregar <i class="fa fa-plus"></i></button>
 </div>
+
+<div class="input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text">
+          <i class="fa fa-search"></i>
+      </div>
+    </div>
+    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="¿Qué buscas?" [(ngModel)]="searchText" autocomplete="off">
+  </div>
+
 <table class="table table-striped">
     <thead>
         <tr>
@@ -20,7 +30,7 @@
             </th>       
         </tr>
 
-        <tr *ngFor="let auto of autos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize; index as i">
+        <tr *ngFor="let auto of autos | filter: searchText | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize; index as i">
             <td scope="row">{{auto._id}}</td>
             <td> {{auto.marca}} </td>
             <td> {{auto.submarca}} </td>
