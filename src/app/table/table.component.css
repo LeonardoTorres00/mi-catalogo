@@ -9,8 +9,7 @@ tbody {
 }
 
 table {
-    width: 90%;
-    margin-left: 80px;
+    width: 100%;
     text-align: center;
     padding: .75rem;
     vertical-align: top;
@@ -39,5 +38,5 @@ img {
 }
 
 .add{
-    padding: 20px 0px 0px 80px;
+    padding: 20px 0px 0px 10px;
 }

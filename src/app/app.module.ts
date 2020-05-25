@@ -14,6 +14,7 @@ import { ModalAddUpdateComponent } from './modals/modals-add-update/modal-add-up
 import { FormsModule } from '@angular/forms';
 import { ModalConfirmActionComponent } from './modals/modal-confirm-action/modal-confirm-action.component';
 import { RangoModelosDirective } from './directives/rango-modelos.directive';
+import { FormatoModelosPipe } from './pipes/formato-modelos.pipe';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { RangoModelosDirective } from './directives/rango-modelos.directive';
     PageNotFoundComponent,
     ModalAddUpdateComponent,
     ModalConfirmActionComponent,
-    RangoModelosDirective
+    RangoModelosDirective,
+    FormatoModelosPipe
   ],
   imports: [
     BrowserModule,
