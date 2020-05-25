@@ -7,6 +7,10 @@
     </div>
 </ng-container>
 
+<p *ngIf="displayProgressBar">
+    <ngb-progressbar [value]="100" type="dark" [striped]=true [animated]=true></ngb-progressbar>
+</p>
+
 <ng-template #content let-modal>
     <div class="modal-header">
         <h4 class="modal-title" id="modal-basic-title">Detalles Automóvil</h4>

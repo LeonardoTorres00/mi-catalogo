@@ -35,5 +35,4 @@ export class ModalAddUpdateComponent implements OnInit{
     }
     return modelos;
   }
-
 }

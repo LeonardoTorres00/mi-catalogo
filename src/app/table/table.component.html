@@ -14,6 +14,12 @@
         </tr>
     </thead>
     <tbody>
+        <tr *ngIf="displayProgressBar">
+            <th colspan="7">
+                <ngb-progressbar [value]="100" type="dark" [striped]=true [animated]=true></ngb-progressbar>
+            </th>       
+        </tr>
+
         <tr *ngFor="let auto of autos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize; index as i">
             <td scope="row">{{auto._id}}</td>
             <td> {{auto.marca}} </td>

@@ -25,5 +25,4 @@ export class RangoModelosDirective implements Validator {
       return forbidden ? { 'forbiddenModels': { value: modelos } } : null;
     };
   }
-
 }
