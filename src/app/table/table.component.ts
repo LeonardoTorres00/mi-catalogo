@@ -20,7 +20,7 @@ export class TableComponent implements OnInit {
 
   ngOnInit(): void {
     this.displayProgressBar = true;
-    this.page = 1;
+    this.page = +sessionStorage.getItem('currentPage');
     this.pageSize = 10;
     this.autoService.getAutos().subscribe((response) => {
       setTimeout(() => {
@@ -35,7 +35,10 @@ export class TableComponent implements OnInit {
     modalRef.componentInstance.accion = 'Agregar';
     modalRef.result.then(
       (auto) => {
-        this.autoService.addAuto(auto).subscribe(response => console.log(response));
+        this.autoService.addAuto(auto).subscribe(response => {
+          sessionStorage.setItem('currentPage', this.page.toString());
+          this.ngOnInit();
+        });
       },
       (response) => {
         console.log(response);
@@ -50,7 +53,10 @@ export class TableComponent implements OnInit {
 
     modalRef.result.then(
       (auto) => {
-        this.autoService.updateAutos(auto).subscribe(response => console.log(response));
+        this.autoService.updateAutos(auto).subscribe(response => {
+          sessionStorage.setItem('currentPage', this.page.toString());
+          this.ngOnInit();
+        });
       },
       (reason) => {
         console.log(reason);
@@ -64,9 +70,9 @@ export class TableComponent implements OnInit {
     modalRef.result.then(
       (autoTemp) => {
         this.autoService.deleteAuto(autoTemp).subscribe(response => {
-          console.log("Se elimino")
-          console.log(response)
-        })
+          sessionStorage.setItem('currentPage', this.page.toString());
+          this.ngOnInit();
+        });
       },
       (reason) => {
         console.log(reason)
