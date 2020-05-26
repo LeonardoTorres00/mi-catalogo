@@ -1,0 +1,16 @@
+
+.log {
+    background-color: rgb(34, 33, 33);
+    color: white;
+    margin: 0 auto;
+    width: 80%;
+    height: 600px;
+    margin-top: 20px;
+    padding-top: 10px;
+    overflow: scroll;
+    font-family: 'Consola', 'monospace';
+}
+
+p {
+    margin: 0;
+}

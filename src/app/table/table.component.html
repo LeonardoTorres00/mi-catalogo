@@ -30,7 +30,7 @@
             </th>       
         </tr>
 
-        <tr *ngFor="let auto of autos | filter: searchText | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize; index as i">
+        <tr *ngFor="let auto of autos | filter: searchText| slice: (page-1) * pageSize : (page-1) * pageSize + pageSize; index as i">
             <td scope="row">{{auto._id}}</td>
             <td> {{auto.marca}} </td>
             <td> {{auto.submarca}} </td>

@@ -26,7 +26,7 @@ export class ListComponent implements OnInit {
       setTimeout(() => {
         this.displayProgressBar = false;
         this.autos = response.data;
-      }, 1500)
+      }, 1500) //Delay 1.5 seg
     })
   }
 
@@ -48,5 +48,4 @@ export class ListComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
-
 }

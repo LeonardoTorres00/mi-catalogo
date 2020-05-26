@@ -1,6 +1,5 @@
 import { Directive, Input } from '@angular/core';
 import { NG_VALIDATORS, Validator, AbstractControl, ValidatorFn } from '@angular/forms';
-import { RouteReuseStrategy } from '@angular/router';
 
 @Directive({
   selector: '[appRangoModelos]',
