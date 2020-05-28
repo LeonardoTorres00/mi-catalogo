@@ -17,6 +17,7 @@ import { ModalAddUpdateComponent } from './modals/modals-add-update/modal-add-up
 import { ModalConfirmActionComponent } from './modals/modal-confirm-action/modal-confirm-action.component';
 import { RangoModelosDirective } from './directives/rango-modelos.directive';
 import { FormatoModelosPipe } from './pipes/formato-modelos.pipe';
+import { LogComponent } from './log/log.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FormatoModelosPipe } from './pipes/formato-modelos.pipe';
     ModalAddUpdateComponent,
     ModalConfirmActionComponent,
     RangoModelosDirective,
-    FormatoModelosPipe
+    FormatoModelosPipe,
+    LogComponent
   ],
   imports: [
     BrowserModule,

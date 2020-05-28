@@ -36,7 +36,14 @@ export class AutosService {
 
   //Actualizar  
   updateAutos(auto: Automovil): Observable<any> {
-    return this.http.put<any>(`${this.autosActionURL}/${auto._id}`, auto);
+    return this.http.put<any>(`${this.autosActionURL}/${auto._id}`, auto).pipe(
+      catchError(this.handleError<any>('addAuto')),
+      tap((result) => {
+        console.log(result);
+        this.messagesServices.add(`Auto editado con id: ${result.data._id}`)
+      })
+    )
+
   }
 
   //Eliminar

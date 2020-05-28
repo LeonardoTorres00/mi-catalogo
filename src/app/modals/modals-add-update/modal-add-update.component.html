@@ -26,8 +26,7 @@
 
             <div *ngIf="submarca.invalid && (submarca.dirty || submarca.touched)" class="alert">
                 <div *ngIf="submarca.errors.minlength" class="alert alert-danger">La submarca debe de tener un mínimo de
-                    4
-                    caracteres.</div>
+                    4 caracteres.</div>
                 <div *ngIf="submarca.errors.required" class="alert alert-danger">La submarca es requerida.</div>
                 <div *ngIf="submarca.errors.rangoModelos" class="alert alert-danger">La submarca es requerida.</div>
             </div>
@@ -37,27 +36,20 @@
                 <input type="text" class="form-control" id="descripcion" placeholder="Agregar descripcion"
                     [(ngModel)]="auto.descripcion" name="descripcion">
             </div>
-
-            <!--- Pendiente-->
             <label for="modelos">Modelos</label>
             <div class="form-row">
                 <div class="form-group">
                     <label for="desde">Desde</label>
                     <input type="range" min="2000" max="2020" class="form-control-range" id="desde" placeholder="desde"
-                        [(ngModel)]="desde" name="desde">
+                        [(ngModel)]="desde" name="desde" [appRangoModelos]="desde">
                     <span>{{desde}}</span>
                 </div>
                 <div class="form-group">
                     <label for="hasta">Hasta</label>
                     <input type="range" min="2000" max="2020" class="form-control-range" id="hasta"
-                        placeholder="hasta" [(ngModel)]="hasta" name="hasta">
+                        placeholder="hasta" [(ngModel)]="hasta" name="hasta" [appRangoModelos]="hasta">
                     <span>{{hasta}}</span>
                 </div>
-               <!---  Revisar
-                <div class="alert">
-                    <div *ngIf="desde.errors.forbiddenModels" class="alert alert-danger">El rango no es permitido.</div>
-                </div>
-                --> 
             </div>
 
             <div class="modal-footer">
